@@ -1,0 +1,10 @@
+[FORMAT]
+max-line-length = 88
+
+[SIMILARITIES]
+min-similarity-lines=4
+
+[MESSAGES CONTROL]
+disable=
+  missing-docstring,
+  fixme

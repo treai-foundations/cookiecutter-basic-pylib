@@ -1,0 +1,7 @@
+-e .
+
+pytest
+coverage
+flake8
+pylint
+black
