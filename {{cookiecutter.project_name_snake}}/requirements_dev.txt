@@ -1,7 +1,11 @@
 -e .
 
 pytest
+{%- if cookiecutter.use_coverage == 'y' %}
 coverage
+{%- endif %}
+{%- if cookiecutter.use_flake8 == 'y' %}
 flake8
+{%- endif %}
 pylint
 black
