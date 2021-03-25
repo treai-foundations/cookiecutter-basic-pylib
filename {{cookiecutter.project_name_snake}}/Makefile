@@ -48,12 +48,15 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with flake8
+{%- if cookiecutter.use_flake8 == 'y' %}
 	flake8 {{ cookiecutter.project_name_snake }} tests
+{%- endif %}
 	find . -type f -name "*.py" | xargs pylint
 
 test: ## run tests quickly with the default Python
 	pytest
 
+{%- if cookiecutter.use_coverage == 'y' %}
 coverage: ## check code coverage quickly with the default Python
 	coverage run --source {{ cookiecutter.project_name_snake }} -m pytest
 	coverage report -m
@@ -61,6 +64,7 @@ coverage: ## check code coverage quickly with the default Python
 
 coverage-web: coverage
 	$(BROWSER) htmlcov/index.html
+{%- endif %}
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist

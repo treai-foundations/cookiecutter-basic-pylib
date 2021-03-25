@@ -8,6 +8,8 @@
   "project_short_description": "Short description of the project",
   "github_action_pr_triggered": "y",
   "github_action_tag_triggered": "y",
+  "use_flake8": "y",
+  "use_coverage": "y",
   "license": ["Proprietary", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3"],
   "_copy_without_render": [
       ".github/workflows/*.yml"
