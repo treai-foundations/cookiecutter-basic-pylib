@@ -62,7 +62,7 @@ coverage: ## check code coverage quickly with the default Python
 	coverage report -m
 	coverage html
 
-coverage-web: coverage
+coverage-web: coverage ## check code coverage and open report in web browser
 	$(BROWSER) htmlcov/index.html
 {%- endif %}
 
