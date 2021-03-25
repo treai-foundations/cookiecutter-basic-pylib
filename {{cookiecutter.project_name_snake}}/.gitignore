@@ -140,4 +140,4 @@ cython_debug/
 .twinerc
 Pipfile
 Pipfile.lock
-_s3_version.py
+_version.py
