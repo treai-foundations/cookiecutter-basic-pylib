@@ -47,7 +47,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
-lint: ## check style with flake8
+lint:
 {%- if cookiecutter.use_flake8 == 'y' %}
 	flake8 {{ cookiecutter.project_name_snake }} tests
 {%- endif %}
