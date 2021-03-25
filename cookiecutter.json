@@ -4,7 +4,7 @@
   "github_username": "github_username",
   "project_name": "name-of-the-project",
   "project_name_snake": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_name_kebab": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_name_kebab": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_short_description": "Short description of the project",
   "github_action_pr_triggered": "y",
   "github_action_tag_triggered": "y",
