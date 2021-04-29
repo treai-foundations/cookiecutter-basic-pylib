@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build help
+.PHONY: clean clean-test clean-pyc clean-build format help
 .DEFAULT_GOAL := help
 
 define BROWSER_PYSCRIPT
@@ -65,6 +65,9 @@ coverage: ## check code coverage quickly with the default Python
 coverage-web: coverage ## check code coverage and open report in web browser
 	$(BROWSER) htmlcov/index.html
 {%- endif %}
+
+format:
+	black --line-length 100 {{ cookiecutter.project_name_snake }} tests setup.py
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
