@@ -47,7 +47,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
-lint:
+lint:  ## use the default linter pylint and the optional flake8 to verify the code style
 {%- if cookiecutter.use_flake8 == 'y' %}
 	flake8 {{ cookiecutter.project_name_snake }} tests
 {%- endif %}
@@ -66,7 +66,7 @@ coverage-web: coverage ## check code coverage and open report in web browser
 	$(BROWSER) htmlcov/index.html
 {%- endif %}
 
-format:
+format: ## format the code using black and the line-length set to 100
 	black --line-length 100 {{ cookiecutter.project_name_snake }} tests setup.py
 
 dist: clean ## builds source and wheel package
