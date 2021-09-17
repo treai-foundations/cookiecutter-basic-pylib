@@ -49,7 +49,7 @@ clean-test: ## remove test and coverage artifacts
 
 lint:  ## use the default linter pylint and the optional flake8 to verify the code style
 {%- if cookiecutter.use_flake8 == 'y' %}
-	flake8 {{ cookiecutter.project_name_snake }} tests
+	flake8 {{ cookiecutter.project_name_snake }} tests setup.py
 {%- endif %}
 	pylint {{ cookiecutter.project_name_snake }} tests setup.py
 
