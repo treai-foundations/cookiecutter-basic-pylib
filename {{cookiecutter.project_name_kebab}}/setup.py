@@ -18,7 +18,6 @@ setup(
     license="{{ cookiecutter.license }}",
     url="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name_kebab }}",
     packages=find_packages(exclude=["tests", "tests.*"]),
-    data_files=[("", ["LICENSE"])],
     install_requires=MINIMAL_REQUIREMENTS,
     zip_safe=False,
     keywords=[
