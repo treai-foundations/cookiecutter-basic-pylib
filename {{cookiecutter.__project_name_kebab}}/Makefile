@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build lint test coverage format help
+.PHONY: clean clean-test clean-pyc clean-build lint test coverage format prepare-env help
 .DEFAULT_GOAL := help
 
 define BROWSER_PYSCRIPT
@@ -46,6 +46,9 @@ clean-test: ## remove test and coverage artifacts
 	rm -f .coverage
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
+
+prepare-env: ## prepare environment GDAL variable and install requirements_dev.txt deps
+	pip install -r requirements_dev.txt --upgrade
 
 lint:  ## use the default linter pylint and the optional flake8 to verify the code style
 {%- if cookiecutter.use_flake8 == 'y' %}
