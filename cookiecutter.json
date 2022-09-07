@@ -2,16 +2,23 @@
   "author_name": "Author Name",
   "author_email": "author@email.com",
   "github_username": "github_username",
-  "project_name": "name-of-the-project",
-  "project_name_snake": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_name_kebab": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "project_name": "Name of the project",
+  "__project_name_snake": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "__project_name_kebab": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_short_description": "Short description of the project",
   "github_action_pr_triggered": "y",
   "github_action_tag_triggered": "y",
   "use_flake8": "y",
   "use_coverage": "y",
-  "license": ["Proprietary", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3"],
+  "license": [
+    "Proprietary",
+    "MIT license",
+    "BSD license",
+    "ISC license",
+    "Apache Software License 2.0",
+    "GNU General Public License v3"
+  ],
   "_copy_without_render": [
-      ".github/workflows/*.yml"
+    ".github/workflows/*.yml"
   ]
 }

@@ -49,17 +49,17 @@ clean-test: ## remove test and coverage artifacts
 
 lint:  ## use the default linter pylint and the optional flake8 to verify the code style
 {%- if cookiecutter.use_flake8 == 'y' %}
-	flake8 {{ cookiecutter.project_name_snake }} tests setup.py
+	flake8 {{ cookiecutter.__project_name_snake }} tests setup.py
 {%- endif %}
-	pylint {{ cookiecutter.project_name_snake }} tests setup.py
+	pylint {{ cookiecutter.__project_name_snake }} tests setup.py
 
 test: ## run tests quickly with the default Python
 	pytest
 
 {%- if cookiecutter.use_coverage == 'y' %}
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source {{ cookiecutter.project_name_snake }} -m pytest
-	coverage report -m --omit={{ cookiecutter.project_name_snake }}/_version.py
+	coverage run --source {{ cookiecutter.__project_name_snake }} -m pytest
+	coverage report -m --omit={{ cookiecutter.__project_name_snake }}/_version.py
 	coverage html
 
 coverage-web: coverage ## check code coverage and open report in web browser
@@ -67,7 +67,7 @@ coverage-web: coverage ## check code coverage and open report in web browser
 {%- endif %}
 
 format: ## format the code using black and the line-length set to 100
-	black --line-length 100 {{ cookiecutter.project_name_snake }} tests setup.py
+	black --line-length 100 {{ cookiecutter.__project_name_snake }} tests setup.py
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
