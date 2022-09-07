@@ -49,8 +49,6 @@ author_name [Author Name]:
 author_email [author@email.com]: 
 github_username [github_username]: 
 project_name [name-of-the-project]: 
-project_name_snake [name_of_the_project]: 
-project_name_kebab [name-of-the-project]: 
 project_short_description [Short description of the project]: 
 github_action_pr_triggered [y]: 
 github_action_tag_triggered [y]: 
@@ -69,18 +67,6 @@ Choose from 1, 2, 3, 4, 5, 6 [1]:
 Each question has a default value.
 
 ### About some options
-
-After the `project_name` you'll be prompted with:
-
-* `project_name_snake`: is the `project_name` value converted in snake case
-* `project_name_kebab`: is the `project_name` value converted in kebab case
-
-You can leave the default value compliant with python standard names for
-package and project name.
-
-**Warning:**
-*When `cookiecutter 2.0` will be available the two options above will be
-changed to `rendered private variable`.*
 
 * `github_action_pr_triggered`: add the github action workflow to react to PRs
 * `github_action_tag_triggered`: add the github action workflow to react to tags
